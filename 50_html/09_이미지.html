@@ -17,21 +17,47 @@
         5. 배너: http://frontendw.dothome.co.kr/assets/images/banner.jpg
     -->
 
+    <!-- 웹표준: 기준을 정해놓고 누구나 동일하게 제작함. 접근성에 준해서 제작하지 않으면 비표준 -->
     <!-- 웹접근성: 장애인이나 고령자분들이 웹 사이트에서 제공하는 정보를 비장애인과 동등하게 접근하고 이용 할 수 있도록 보장하는 것 -> alt를 반드시 기록한다. -->
     
     <!-- 폴더와 파일명 구분자는 /(슬래시) 이다. -->
     
-    <!-- 1. html문서보다 하위 폴더에 이미지가 있는 경우: 폴더1/폴더2/폴더3/.../파일명으로 쓴다. -->
 
-    <!-- 2. html문서와 이미지가 같은 폴더에 있는 경우: 파일 이름만 쓴다. -->
+
+    <!-- 상대 경로 지정 방법 -->
+    <!-- html문서를 기준으로 이미지가 어디 있는가? -->
+    <!-- 1. html문서보다 하위 폴더에 이미지가 있는 경우: 폴더1/폴더2/폴더3/.../파일명으로 쓴다. -->
+    <img src="assets/pic_trulli.jpg" alt="trulli">
+    <img src="assets/images/i2.jpg" alt="클러치백">
+    <!-- 2. html문서와 이미지가 같은 폴더에 있는 경우: 파일 이름만 쓴다.
+    =>작성중인 '09_이미지' 문서와 'coffeebeans.jpg' 이미지가 sol이라는 폴더 안에 같은 위치에 있음. -->
+    <img src="coffeebeans.jpg" alt="coffeebeans">
+    <!-- =>그림을 볼 수 없는 사람들을 위해 그림을 대체할 수 있는 텍스트 alt. 이미지를 표현할 수 있는 짤막한 문장 -->
 
     <!-- 3. html문서보다 상위 폴더에 이미지가 있는 경우: ../../파일명으로 쓴다. -->
-
+    <img src="../workplace.jpg" alt="workplace">
     <hr>
-    <!-- 루트 폴더로 부터 경로 설정 -->
+    <!-- 루트 폴더로 부터 경로 설정. 작업영역폴더(WP0417) 기준으로 이미지가 어디 있는가?
+        =>실무에서 이 방법을 주로 활용함
+        =>/(슬래시)부터 작성 /(슬래시)=작업영역폴더(WP0417)
+    <!-- 서버에서만 동작한다. 폴더에서 html문서를 직접 더블클릭orF5키 눌러서 열면(로컬에서 동작) 이미지가 안 뜸. -->
+    <img src="/50_html/assets/pic_trulli.jpg" alt="trulli">
+    <img src="/50_html/assets/images/i2.jpg" alt="클러치백">
+    <img src="/50_html/coffeebeans.jpg" alt="coffeebeans">
+    <img src="/workplace.jpg" alt="workplace">
+
+
 
     <hr>
     <!-- 절대 경로 지정 방법 -->
+    <img src="http://frontendw.dothome.co.kr/assets/images/banner.jpg" alt="Dress 1+1 보러가기">
+    <!-- 
+        비트맵 이미지:
+            1) jpg: 24bit 트루컬러(실제 컬러와 같다)(사진)
+            2) gif: 256 color, 배경 투명, 애니메이션 gif
+            3) png: 24bit 트루컬러(사진), 배경 투명
+     -->
+    <img src="https://cdn.newstof.com/news/photo/202303/20152_20196_3216.jpg" alt="">
 
 </body>
 </html>
