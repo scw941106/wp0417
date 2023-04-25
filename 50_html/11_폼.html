@@ -13,25 +13,25 @@
     <p>폼(양식)? 검색 창, 로그인 창, 회원가입 페이지, 게시판 페이지</p>
 
     <!-- 폼과 관련된 태그
-        <form>: 폼의 요소를 담기 위한 컨테이너
-        <fieldset>: 폼의 그룹핑
-        <legend>: fieldset의 캡션(제목). 항상 fieldset 내부에 기록함.
-        <input type="">: 외부에서 정보를 입력하는 한 줄 입력 폼
-            type: text, password, search, tel, email, url
-                =>뒤에 다섯 가지 종류에 해당되지 않으면 전부 text 타입
-                =>ex.id는 text 타입
-            버튼과 관련된 type: submit, reset, button, image, file
-            체크박스와 관련된 type: checkbox, radio
-        <label>: input을 구분하는 레이블
-        <button type="">: 버튼
-            type: submit, reset, button
-        <textarea>: 여러 줄 입력하는 입력 폼
-        <select>: 폼 안에서 사용되는 선택 목록 (선택만 가능)
-            select 안에 사용하는 태그
-            <option>: 목록의 항목
-            <optgroup>: 목록이 많을 때 목록의 항목을 그룹핑
-        <datalist>: 선택 목록 + 입력까지 가능한 목록
-            =>input 태그와 함께 사용함.
+        <form>: 폼의 요소를 담기 위한 컨테이너. form 태그로 전체를 감싸고 하단의 태그들은 그 안에 작성.
+            <fieldset>: 폼의 양식 종류를 그룹핑
+            <legend>: fieldset의 캡션(제목). 항상 fieldset 내부에 기록함.
+            <input type="" id="aaa">: 외부에서 정보를 입력하는 한 줄 텍스트 입력 폼
+                type: text, password, search, tel, email, url
+                    =>뒤에 다섯 가지 종류에 해당되지 않으면 전부 text 타입
+                    =>ex.id는 text 타입
+                버튼과 관련된 type: submit, reset, button, image, file
+                체크박스와 관련된 type: checkbox, radio
+            <label for="aaa">: input을 구분하는 레이블. input 태그와 aaa값이 같아야 함.
+            <button type="">: 버튼
+                type: submit, reset, button
+            <textarea>: 여러 줄 텍스트 입력 폼
+            <select>: 폼 안에서 사용되는 선택 목록 (선택만 가능)
+                select 안에 사용하는 태그
+                <option value="">: 목록의 항목
+                <optgroup>: 목록이 많을 때 목록의 항목을 그룹핑
+            <datalist>: 선택 목록 + 입력까지 가능한 목록
+                =>input 태그와 함께 사용함.
      -->
 
     <!-- 서버 프로그래밍언어: php, jsp, asp -->
