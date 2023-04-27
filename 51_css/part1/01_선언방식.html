@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <!-- 경로 설정 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 
+        CSS를 사용할 수 있는 위치 (사용하는 방법)
+        1. 인라인: HTML 태그의 style 속성의 값으로 기록
+        2. 내부: HTML <style> 태그 사이에 기록
+        3. 외부: HTML <link> 태그로 *.css 파일을 연결 =>실무에서 사용
+     -->
+    
+    <!-- 2. 외부 CSS: <link> 태그로 *.css 파일을 연결 -->
+
+    <!-- <link>, <style> 태그는 <head> 사이에 쓴다. 보통 title 태그 밑에 쓴다. -->
+    <style>
+        /* 
+            HTML 형식:
+            <태그 속성="값">내용</태그>
+            <태그 attribute="값" attribute="값" ...>내용</태그>
+
+            CSS 형식: 
+            선택자 {속성:값;} 
+            선택자 {property:값;property:값;...} =>여러 개의 값을 구분하는 용도 ;
+                                                    html에서는 공백 1개로 구분
+        */
+
+        /* 1. 내부 CSS: <style> 태그 사이에 기록 */
+        /* 선택자 위치의 h1이란 글자가 body의 <h1> 요소를 선택하여 글자 color를 red로 지정한다는 의미 */
+        h1 {color:red;}
+
+    </style>
+</head>
+<body>
+    <h1>CSS 선언 방식</h1>
+    <h2>인라인, 내부, 외부</h2>
+    <!-- 3. 인라인 CSS: HTML의 스타일 속성의 값으로 기록  -->
+    <p style="color:red;">인라인 CSS이란 HTML의 스타일 속성의 값으로 CSS의 속성과 값을 기록한다.</p>
+</body>
+</html>
