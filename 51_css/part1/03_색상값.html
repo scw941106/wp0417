@@ -6,19 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* CSS 주석: ctrl+/ 또는 shift+alt+a */
         /* 140개 영문 키워드: https://www.w3schools.com/colors/colors_names.asp */
 
-        /* HEX: 16진수 -> 0~9, A~F */
-        /* #RRGGBB 또는 #RGB */
+        /* 
+            2진수: 0, 1
+            8진수: 0 ~ 7
+            16진수: 0 ~ 9, A ~ F
+            10진수: 0 ~ 9
+        */
+
+        /* HEX(헥사): 16진수 -> 0~9, A~F */
+        /* #RRGGBB 또는 #RGB -> 빛의 혼합 방식 */
+        /* 
+            6자 또는 3자
+            #112234
+            #000000 -> black -> #000 -> 가장 작은, 어두운 숫자 개념
+            #ffffff -> white -> #fff -> 가장 큰, 밝은 숫자 개념
+            #ff0000 -> red -> #f00
+            #0000ff -> blue -> #00f
+            #ffff00 -> yellow -> #ff0
+            #ff00ff -> magenta -> #f0f
+            #00ffff -> cyan -> #0ff
+        */
 
         /* rgb(0~255, 0~255, 0~255) */  
+        /* 
+            rgb(R, G, B)
+            rgb(0, 0, 0)
+            rgb(255, 255, 255)
+            rgb(255, 0, 0)
+         */
 
         /* rgba(0~255, 0~255, 0~255, 0~1) */
+        /* 
+            rgba(R, G, B, alpha)
+            alpha는 투명도: 0 ~ 1(0: 투명, 1: 불투명, 0.5: 반투명)
+            rgba(0, 0, 0, 0.5)
+            콤마(,) 사이 공백 생략 가능
+            0.5에서 소수점 앞의 0은 생략 가능
+            rgba(255,0,0,.5)
+        */
 
         /* hsl(0~359, 0~100%, 0~100%) */
+        /* 
+            hsl(Hue 색상, Saturation 채도, Lightness 명도)
+            hsl(각도(0과 360은 같음), 백분율%, 백분율%)
+            hsl(0, 100%, 50%)
+        */
         
         /* hsla(0~359, 0~100%, 0~100%, 0~1) */
+        /* 
+            hsla(H, S, L, alpha)
+            alpha는 투명도: 0 ~ 1(0: 투명, 1: 불투명, 0.5: 반투명)
+            hsla(0, 100%, 50%, 0.5)
+         */
 
+
+         .colorName {color:red;}
+         .colorHex {color:#ff0000;}
+         .colorRgb {color:rgb(255, 0, 0);}
+         .colorRgba {color:rgba(255, 0, 0, 1);}
+         .colorHsl {color:hsl(0, 100%, 50%);}
+         .colorHsla {color:hsla(0, 100%, 50%, 1);}
     </style>
 </head>
 <body>
