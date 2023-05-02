@@ -13,32 +13,60 @@
             border: solid;
         }
 
-        /* 얇은 */
+        /* 
+            margin/padding과 동일
+            border-width: 값1 값2 값3 값4;
+            border-style: 값1 값2 값3 값4;
+            border-color: 값1 값2 값3 값4;
+        */
 
+        /* 얇은(thin)(=1px) */
+        .b1 {
+            border-width: thin;
+        }
 
-        /* 중간 */
+        /* 중간(medium, 기본값)(=3px) */
+        .b2 {
+            border-width: medium;
+        }
 
+        /* 두꺼운(thick)(=5px) */
+        .b3 {
+            border-width: thick;
+        }
 
-        /* 두꺼운 */
-
-
+        /* 일반적으로 숫자로 지정함 */
         /* 1px */
+        .b4 {
+            border-width: 1px;
+        }
 
-
-        /* 1em */
-
+        /* 1em, 엠(단위)(=16px) */
+        /* em은 글자 크기의 배수
+            현재 페이지의 글자 크기 기본값은 16px */
+        .b5 {
+            border-width: 1em;
+        }
 
         /* 16px */
-
+        .b6 {
+            border-width: 16px;
+        }
 
         /* (7) .b7에 선 굵기를 상하는 1px, 좌우는 3px로 지정하시오. */
-
+        .b7 {
+            border-width: 1px 3px;
+        }
 
         /* (8) .b8에 선 굵기를 위는 1px 좌우는 3px, 아래는 5px로 지정하시오. */
-
+        .b8 {
+            border-width: 1px 3px 5px;
+        }
 
         /* (9) .b9에 선 굵기를 위는 1px 오른쪽은 3px, 아래는 5px, 왼쪽은 7px로 지정하시오. */
-
+        .b9 {
+            border-width: 1px 3px 5px 7px;
+        }
 
     </style>
 </head>

@@ -16,6 +16,7 @@
         }
 
         /* 
+            박스1의 실제 크기 계산식
             width:560px
             = width + padding*2 + border*2
             = 500 + 20*2 + 10*2 
@@ -24,13 +25,17 @@
             = 150 + 20*2 + 10*2 
         */
         /* (1) .div1의 box-sizing은 content-box로 지정하시오. */
-
+        .div1 {
+            box-sizing: content-box; /* width+height 기준이 content */
+        }
 
 
         /* width:500px; height:150px; */
         /* width와 height에 border와 padding 크기가 포함된다. */
         /* (2) .div2의 box-sizing은 border-box로 지정하시오. */
-
+        .div2 {
+            box-sizing: border-box; /* width+height 기준이 border */
+        }
 
 
         

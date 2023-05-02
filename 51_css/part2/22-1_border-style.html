@@ -10,37 +10,63 @@
             width: 200px;
             height: 150px;
             margin: 20px;
+            border: 10px solid red;
         }
 
-        /* 선 없음 */
+        /* 선 제거(없음) */
+        .b1 {
+            border-style: none;
+        }
 
+        /* 실선(solid) */
+        /* 스타일은 반드시 써야 함
+            색을 생략하면(지정하지 않으면) 글자색
+            글자색을 지정하지 않으면 검정 */
+        .b2 {
+            color: red;
+            border-style: solid;
+            border-color: green;
+        }
 
-        /* 실선 */
+        /* 점선(dotted) */
+        .b3 {
+            border-style: dotted;
+        }
 
+        /* 대시선(dashed) */
+        .b4 {
+            border-style: dashed;
+        }
 
-        /* 점선 */
+        /* 숨김, 안 보이는 선(hidden) */
+        .b5 {
+            border-style: hidden;
+        }
 
+        /* 이중실선(double) */
+        .b6 {
+            border-style: double;
+        }
 
-        /* 대시선 */
+        /* 홈이 파임(groove) */
+        .b7 {
+            border-style: groove;
+        }
 
+        /* 산등성이(ridge) */
+        .b8 {
+            border-style: ridge;
+        }
 
-        /* 숨김 */
+        /* 안쪽(inset) */
+        .b9 {
+            border-style: inset;
+        }
 
-
-        /* 이중실선 */
-
-
-        /* 홈이 파임 */
-
-
-        /* 산등성이 */
-
-
-        /* 안쪽 */
-
-
-        /* 바깥쪽 */
-
+        /* 바깥쪽(outset) */
+        .b10 {
+            border-style: outset;
+        }
         
 
     </style>
