@@ -11,19 +11,45 @@
             height:150px;
         }
 
+        /*
+            레이아웃(Layout, 배치) 방식
+            1. table (x) -> 비표준
+            2. float -> flex 방식으로 바뀜, 최근에 많이 대체됨
+            3. flexible = display: flex; -> 현재까지 메인 방식
+            4. position: 요소를 겹칠 때, 동적 효과(움직임)
+            5. display: grid;
+        */
+
+        /*
+            블록레벨 요소(원래 블록레벨 요소는 세로 배치됨)를 가로 배치 한다.
+            공중부양(부유)
+            float: left; 
+            float: right; 
+            float: none; left, right 적용한 자신을 제거함(float 적용하지 않은 것과 같음)
+
+            float 적용한 요소를 float 영향 받지 않게 함
+            ex. float left->clear left, float right->clear right
+            clear: left;
+            clear: right;
+            clear: both; left, right 둘다 사용 가능
+        */
+
         /* (1) .div1의 float를 left로 지정하시오. */
         .div1 {
+            float: left; /* fl만 입력하면 뜸. 분홍박스가 하늘색 뒤로 올라감 */
             background:lightblue;
             /* width의 기본값이 콘텐츠크기로 바뀐다. */
         }
 
         /* (2) .div2의 float를 right로 지정하시오. */
         .div2 {
+            float: right; /* flr만 입력하면 뜸. 노랑박스가 하늘색 뒤로 올라감 */
             background: lightcoral;
         }
 
         /* (3) .div3의 clear 속성을 both로 지정하시오. */
         .div3 {
+            clear: both;
             background: lightgoldenrodyellow;
             /* 상위 요소의 float 효과를 제거 */
         }
