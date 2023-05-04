@@ -8,7 +8,16 @@
     <style>
 
         /* (1) 본문의 두 번째 p 요소와 세 번째 p 요소에 ::after 선택자를 사용하여 clear:both; 처리하시오. */
-
+        /*
+            자식 요소를 float 처리하면 이미지가 공중 부양함. 부모 요소의 높이가 자식 요소의 높이만큼 처리가 안됨.
+            항상 부모 요소는 자식 크기만큼 높이를 가짐(텍스트, 이미지 등)
+            부모 요소가 자식 요소의 크기만큼 높이를 가지게 하려면 (1) 방법 또는 (2) 방법. (1) 방법이 더 좋은 방법.
+        */
+        p::after {
+            content: ''; /* 내용을 쓰든 안 쓰든 content 속성과 함께 씀 */
+            clear:both;
+            display: block; /* db만 입력하면 뜸. 위에 clear까지는 인라인 요소이기 때문에 display block까지 적용해야 함 */
+        }
 
 
         /* (2) 모든 p 요소에 overflow를 hidden 처리하시오. */
@@ -16,7 +25,7 @@
             width: auto;
             height: auto;
             border: 1px solid red;
-            overflow: hidden; /* 원래 float를 처리하는 방식은 아님. (1)가 맞는 방식 */
+            overflow: hidden; /* 원래 float를 처리하는 방식은 아님. (1)이 맞는 방식 */
         }
 
 

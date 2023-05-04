@@ -6,29 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+            자식 요소 float 처리 했을 때
+            부모 높이의 크기를 자식 요소의 높이만큼 지정
+            overflow: hidden
+        */
         .container {
             background: red;
             overflow:hidden;
         }
         .container div {
-            float:left;
+            float:left; /* container의 자식은 div, div의 자식이 글자, container의 자식은 글자가 아님 =>container(빨간색)은 div(노란색) 만큼 크기를 가짐, 부모는 자식만큼 크기를 가짐 */
             width:200px;
             height:100px;
-            margin:20px;
+            margin:20px; /* 화면상에서 딱 노란색 높이(자식 높이)가 아니라 여백이 더 있는 건 margin 값을 줬기 때문 */
             background:yellow;
         }
 
-        /* (1) .ovf1에 overflow 속성을 visible로 지정하시오. */
+        /* 
+            overflow
+            overflow-y
+            overflow-x
+        */
 
+        /* (1) .ovf1에 overflow 속성을 visible로 지정하시오. */
+        .ovf1 {
+            overflow: visible;
+        }
 
         /* (2) .ovf2에 overflow-y 속성을 scroll로 지정하시오. */
-
+        /* overflow-x 속성은 좌우로 스크롤바 생김 */
+        .ovf2 {
+            overflow-y: scroll;
+        }
 
         /* (3) .ovf3에 overflow 속성을 hidden으로 지정하시오. */
-
+        .ovf3 {
+            overflow: hidden;
+        }
 
         /* (4) .ovf4에 overflow 속성을 auto로 지정하시오. */
-
+        /* 내용이 넘치면 스크롤바 생김. 내용이 넘치지 않으면 안 생김 */
+        .ovf4 {
+            overflow: auto;
+        }
 
     </style>
 </head>
