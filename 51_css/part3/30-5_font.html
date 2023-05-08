@@ -11,11 +11,25 @@
             font-style: italic;
             font-weight: bold;
             font-size: 16px;
-            line-height: 1.6;
+            line-height: 1.6; /* 줄간격은 글자 크기(16px)의 1.6배 */
             font-family: 'Courier New', Courier, monospace;
         }
 
-        /* font: [스타일] [굵기] 크기[/줄간격] 글꼴; */
+        .font2 {
+            font: italic bold 16px/1.6 'Courier New', Courier, monospace;
+        }
+
+        /* 
+            순서 상관x
+            border: 굵기 스타일 색;
+            border: 스타일 굵기 색;
+            border: 색 스타일 굵기;
+
+            (속기형)
+            순서 상관o (스타일과 굵기는 순서 상관x)
+            font: 크기 글꼴;
+            font: [스타일] [굵기] 크기[/줄간격] 글꼴;
+        */
 
         
     </style>
