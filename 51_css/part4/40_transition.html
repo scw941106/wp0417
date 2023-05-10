@@ -13,22 +13,37 @@
             transition-timing-function: 전환 시간 함수;
             transition-delay: 전환 지연 시간(단위: s(초));
 
-            transition: [property] duration [timing-function] [delay];
+            (속기형)
+            transition: [CSS속성] 전환시간 [가속도] [지연시간];
         */
 
 
         /* div에 전환 속성을 all, 전환 시간은 0.3초, 가속도는 ease, 지연 시간은 0초로 지정하시오. */
+        /* s: second(초) */
         
+        /* A */
         div {
+            transition: all; /* trs만 입력하면 뜸. all은 모든 속성 여기서는 width와 background가 모두 전환한다는 의미. width를 입력하면 width만 전환. */
+            transition-duration: .3s;
+            transition-timing-function: ease;
+            transition-delay: 0s;
+
+            transition: all 0.3s ease 0s;
+            transition: .3s;
+
             width:100px;
             height:100px;
             background: red;
         }
         
+        /* B */
         div:hover {
             width: 200px;
             background: blue;
         }
+
+        /* A -> B 로 자연스럽게 바뀌도록 하는 과정이 전환 속성
+            transition 부분 주석처리 하고 안 하고 차이 확인하기 */
     </style>
 </head>
 <body>
