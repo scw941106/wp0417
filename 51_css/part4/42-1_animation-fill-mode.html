@@ -20,17 +20,20 @@
             animation-duration: 3s;
             animation-delay: 2s;
             background: red;
-            left:0px;
+            /* 1, infinite 처리하면 다시 1로 돌아옴 */left:0px;
         }
+
+        /* 반복 횟수를 infinite로 지정하면 forwards는 동작하지 않는다. */
         @keyframes move {
-            0% {left:100px; background: blue;}
-            100% {left:300px; background: green;}
+            /* 2 */0% {left:100px; background: blue;}
+            /* 3 */100% {left:300px; background: green;}
         }
 
         /* 애니메이션이 재생되지 않을 때(시작 전, 종료 후 또는 둘 다) 요소의 스타일 지정 */
         /* 시작(지연) -> 0% -> 100% -> 시작 */
         .anim1 {animation-fill-mode: none;}
-        /* 시작(지연) -> 0% -> 100% */
+        /* 시작(지연) -> 0% -> 100%
+            100% 상태에서 정지시키는 것. 자주 사용됨. */
         .anim2 {animation-fill-mode: forwards;}
         /* 0%(지연) -> 100% -> 시작 */
         .anim3 {animation-fill-mode: backwards;}

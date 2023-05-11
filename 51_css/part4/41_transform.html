@@ -10,7 +10,7 @@
         .outer {
             border: 1px solid black;
             /* perspective는 관점 속성으로 부모 요소에 지정한다. */
-            perspective: 1000px;
+            perspective: 1000px; /* 숫자가 크면 멀리, 작으면 가까이 있는 것. 숫자가 너무 작으면 결과가 왜곡되어 나타남. */
             /* 관점의 위치로 perspective 속성과 함께 사용해야 한다. */
             perspective-origin: 50% 50%;
             margin: 20px;
@@ -68,19 +68,37 @@
 
         .trfro {
             /* 변환의 기준 */
+            /* 
+                transform-origin: x축 y축;
+                    값: px, %
+                    x축: left, right, center
+                    y축: top, bottom, center
+            */
             transform-origin: 0 0;
+            /*
+                기본값 transform-origin: 50% 50%;
+                transform-origin: center top; 과 같은 의미
+            */
         }
         /* .outer에 마우스를 올렸을 때 .trfro를 60도 회전되도록 지정하시오. */
-
+        .outer:hover .trfro {
+            transform: rotate(60deg);
+        }
 
         /* .outer에 마우스를 올렸을 때 .trfrox를 x축 기준으로 60도 회전되도록 지정하시오. */
-
+        .outer:hover .trfrox {
+            transform: perspective(200px) rotateX(60deg);
+        }
 
         /* .outer에 마우스를 올렸을 때 .trfroy를 y축 기준으로 90도 회전되도록 지정하시오. */
-
+        .outer:hover .trfroy {
+            transform: rotateY(90deg);
+        }
 
         /* .outer에 마우스를 올렸을 때 .trfsk를 y축 기준으로 10도 기울이시오. */
-
+        .outer:hover .trfsk {
+            transform: skewY(10deg);
+        }
 
     </style>
 </head>
