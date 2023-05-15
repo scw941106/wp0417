@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+    <!-- 외부 CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 내부 CSS */
+    </style>
+    <!-- 
+
+        JAVA(언어) - 제임스 아서 고슬링, 1991
+        JavaScript(자바스크립트) - 브랜든 아이크, 1995
+        서로 다른 언어이다.
+
+        HTML5: 내용
+        CSS3: (정적)디자인 (동적표현도 몇 가지 있음)
+        JS(ECMAScript6, ES6, 에크마): 동적표현
+            1. HTML 콘텐츠와 속성 변경
+            2. CSS 속성 변경
+            3. 라이브러리 활용
+                - jQuery(자바스크립트로 만들어진 라이브러리)
+            4. 웹 애플리케이션 개발
+                - React.js, Vue.js, Angular.js
+            5. 서버 개발
+                - Node.js
+
+        코드 입력시 주의 사항
+            1. 자바스크립트는 대소문자를 구분한다. ex.Document로 쓰면 인식x
+                html, CSS는 대소문자를 구분하지 않음. ex.<scRipt>로 써도 인식함.
+            2. 문장 끝에 세미콜론(;)을 쓴다.
+            3. 문자열 데이터는 큰따옴표("") 또는 작은 따옴표('')로 묶는다.
+
+            자바스크립트 코드는 head 사이 또는 body 사이에 쓸 수 있다.
+                (head에 쓰는 사람도 있고 body에 쓰는 사람도 있는데 body에 쓰는 게 나음.
+                언어를 입력하면 위에서 아래로 읽는데, head에 쓰면 아래로 내려갔다가 다시 위로 올라가서 읽어야 하므로 로딩이 길어짐. body에 쓰면 순서대로 읽기 가능.)
+     -->
+    <!-- 외부 스크립트 -->
+    <script src="script.js"></script>
+    <!-- 내부 스크립트 -->
+    <script>
+        // document -> 객체
+        // write -> 메서드
+        // 'hello' -> 문자열 데이터 ->값
+        // '17' -> 숫자 데이터 -> 값
+        document.write('hello');
+    </script>
+</head>
+
+<body>
+    <h1>어디에?</h1>
+    <!-- 외부 스크립트 -->
+    <script src="script.js"></script>
+    <!-- 내부 스크립트 -->
+    <script>
+        document.write('17');
+    </script>
+    
+</body>
+
+</html>
