@@ -11,12 +11,25 @@
 <body>
     <h1>데이터 유형</h1>
     <script>
-        // typeof 변수 또는 데이터;
+        // 연산자: typeof ~ 데이터의 유형(숫자,문자열이 맞는지 등)을 확인할 수 있음. 점검.
+        // typeof 변수;
+        // typeof 데이터;
 
         var num = 100;
         var str = '자바스크립트';
+        var bool = true;
+
+        var und;
 
         // 출력
+        document.write(typeof num, '<br>'); /* num -> 변수 */
+        document.write(typeof 'num', '<br>'); /* 'num' -> 문자열 데이터 */
+        document.write(typeof 100, '<br>');
+        document.write(typeof str, '<br>');
+        document.write(typeof bool, '<br>');
+        document.write(typeof false, '<br>');
+        document.write(typeof und, '<br>');
+        document.write(typeof null, '<br>');
 
     </script>
 </body>
