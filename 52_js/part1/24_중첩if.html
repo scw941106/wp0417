@@ -12,6 +12,8 @@
     <h1>if</h1>
     <script>
         /* 
+            코드 자체가 if가 될 수 있음. else와 else if도 들어갈 수 있음.
+
             if (조건식1) {
                 if (조건식2) {
                     코드;
@@ -19,6 +21,7 @@
             }
         */
 
+        // 보통 id와 pw는 데이터베이스에 저장된 자료를 가져와서 검사한다.
         var id = 'easy1004';
         var pw = '112233';
 
@@ -31,6 +34,7 @@
             } else {
                 alert('비밀번호가 일치하지 않습니다.');
                 // 브라우저 새로고침
+                // 객체: window, document, console, location
                 location.reload();
             }
         } else {

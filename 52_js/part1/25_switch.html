@@ -12,8 +12,22 @@
     <h1>switch</h1>
     <script>
         /* 
+            // switch 내용과 if 내용이 같기 때문에 switch문을 생략해도 됨.
+            if (변수 == 값1) {
+                코드1;
+            } else if (변수 == 값2) {
+                코드2;
+            } else if (변수 == 값3) {
+                코드3;
+            } else {
+                코드4;
+            }
+
             var 변수 = 초깃값;
 
+            break -> switch, 반복문을 탈출할 때 사용한다.
+
+            // 변수의 값이 값1과 같으면 코드1 실행, 값2와 같으면 코드2 실행, ... 같은 값이 없으면 코드4
             switch (변수) {
                 case 값1: 코드1;
                 break;
@@ -29,20 +43,32 @@
         var url;
 
         switch (site) {
-            case '구글': url = 'www.google.com';
+            case '구글': url = 'google.com';
             break;
-            case '다음': url = 'www.daum.net';
+            case '다음': url = 'daum.net';
             break;
-            case '네이버': url = 'www.naver.com';
+            case '네이버': url = 'naver.com';
             break;
-            case '네이트': url = 'www.nate.com';
+            case '네이트': url = 'nate.com';
             break;
             default: alert('보기 중에 없는 사이트입니다.');
         }
 
         // window.location.href = 'url'
         // 현재 위치에서 url에 저장된 주소로 이동된다.
-        if (url) location.href = 'https://' + url;
+        // if (url) location.href = 'https://' + url;
+
+        // 객체: window, document, location
+        // 메서드: reload() ~ 괄호가 있다.
+        // 속성: href ~ 괄호가 없다.
+        // 객체는 메서드와 속성을 갖고 있다.
+        // 객체.메서드() -> location.reload()
+        // 객체.속성 -> location.href
+        // 속성과 메서드는 객체 없이 사용할 수 없다.
+
+        if (url) {
+            location.href = 'https://www.' + url;
+        }
     </script>
 </body>
 
