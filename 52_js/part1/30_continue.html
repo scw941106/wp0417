@@ -6,11 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS+JS</title>
-    <style>
-        .blue {color:blue;}
-        .red {color:red;}
-        .aqua {color:aqua;}
-    </style>
 </head>
 
 <body>
@@ -18,7 +13,15 @@
     <script>
         /* 
             continue: 반복문에서 contiune 이후 코드를 무시하고, while문에서는 조건식으로, for문에서는 증감식으로 이동하여 반복문을 계속 실행한다.
+            (=continue를 만났을 때, break처럼 문장을 빠져나가는 게 아니라 while문에서는 조건식(a <= 10)으로, for문에서는 증감식(i++)으로 이동. 조건식이 거짓이 되면 그때 빠져나감)
         */
+
+        var a = 0;
+        while (a <= 9) {
+            a++;
+            if (a % 2 == 0) continue;
+            document.write(a, '<br>');
+        }
 
         for (var i = 1; i <= 10; i++) {
             if (i % 2 == 0) continue;

@@ -6,23 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS+JS</title>
-    <style>
-        .blue {color:blue;}
-        .red {color:red;}
-    </style>
 </head>
 
 <body>
     <h1>for</h1>
     <script>
         /* 
+            var 변수 = 초기값; (=>이 줄 전체가 초기식)
+            while (조건식) {
+                코드;
+                증감식;
+            }
+
+            위 while문과 아래 for문은 같은 문장. 일반적으로 for문을 자주 사용.
+
             for (초기식; 조건식; 증감식) {
                 코드;
             }
         */
 
+        var a = 1;
+        while(a <= 10) {
+            document.write('while반복' + a, '<br>');
+            a++;
+        }
+
+        // 초기식 -> 조건식 비교 -> 조건식이 참일 경우 {코드;} 실행 -> 증감식 실행 -> 다시 조건식 비교 -> 조건식이 거짓이 되었을 때 for문을 빠져나감
         for (var i = 1; i <= 10; i++) {
-            document.write('반복' + i, '<br>');
+            document.write('for반복' + i, '<br>');
         }
 
     </script>
