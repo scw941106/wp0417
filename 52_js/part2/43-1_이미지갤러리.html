@@ -12,11 +12,20 @@
     <h1>이미지 갤러리</h1>
     <div id="galleryZone">
         <p>
-            <button onclick="gallery(0)">이전</button>
-            <button onclick="gallery(1)">다음</button>
+            <!-- 인라인 스크립트 -->
+            <button onclick="gallery(0);">이전</button>
+            <button onclick="gallery(1);">다음</button>
         </p>
         <p><img src="../assets/pic_1.jpg" alt="" id="photo"></p>
     </div>
+
+    <!-- 
+        HTML의 이벤트 속성: onclick
+            버튼을 클릭하면 "gallery(0)" 함수를 출력한다.
+            gallery(0)만 스크립트. 함수 끝에 ;은 생략 가능.
+            함수 안에 매개변수 값을 0, 1로 줌.
+     -->
+
     <script>
         /* 
             return: 함수 호출문에 결괏값 반환하고 함수 종료
@@ -33,17 +42,30 @@
 
         var num = 1;
         function gallery(direct) {
-            if (direct) {
-                if (num == 8) return;
+            if (direct) { // direct 값이 1이면 참으로 if문 실행.
+                if (num == 8) return; // 8 값을 만나면 함수를 끝냄.
                 num++;
-            } else {
-                if (num == 1) return;
+            } else { // direct 값이 0이면 거짓으로 else문 실행.
+                if (num == 1) return; // 1 값을 만나면 함수를 끝냄.
                 num--;
             }
 
             var imgTag = document.getElementById('photo');
             imgTag.setAttribute('src', '../assets/pic_' + num + '.jpg');
+            // imgTag.setAttribute('src', '../assets/pic_8.jpg');
+            // imgTag.setAttribute('src', '../assets/pic_7.jpg');
+            // ...
+            // imgTag.setAttribute('src', '../assets/pic_1.jpg');
         }
+
+        /* 
+            객체.메서드();
+            document.write();
+            document.getElementById('아이디명'); ~ 문서에 아이디명에 해당하는 요소를 가져온다.
+                ex.위에 HTML img 태그 안에 있는 id="photo"에 해당하는 이미지 소스를 가져옴.
+            객체.setAttribute('속성', '값'); ~ 객체의 HTML의 속성을 값으로 설정한다.
+                ex.'../assets/pic_' + num + '.jpg' <- 값을 -> 'src' 에 설정함.
+        */
     </script>
 </body>
 

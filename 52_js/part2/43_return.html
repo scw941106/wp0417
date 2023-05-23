@@ -24,6 +24,35 @@
                 var 변수 = 함수명();
         */
 
+        function myFn1() {
+            document.write('myFn1() 함수가 실행되었다. <br><br>');
+        }
+
+        myFn1();
+
+        function myFn2(a, b) {
+            document.write(a + b, '<br>');
+            document.write(a * b, '<br><br>');
+        }
+
+        myFn2(1, 2);
+
+        function myFn3(a, b) {
+            return; // 아래 코드가 실행되지 않고 함수를 빠져나옴.
+            document.write(a + b, '<br>');
+            document.write(a * b, '<br>');
+        }
+
+        myFn3(1, 2);
+
+        function myFn4(a, b) {
+            document.write(a + b, '<br>');
+            return 30; // 맨 아래 함수 호출에 있는 myFn4에 30 값을 전달.
+            document.write(a * b, '<br>');
+        }
+
+        document.write(myFn4(1, 2));
+
 
     </script>
 </body>
