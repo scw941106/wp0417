@@ -50,6 +50,18 @@
                 num--;
             }
 
+/*         이미지갤러리(롤링):
+        var num = 1;
+        function gallery(direct) {
+            if (direct) {
+                if (num == 8) num = 0;
+                num++;
+            } else {
+                if (num == 1) num = 9;
+                num--;
+            }
+            console.log(num); */
+
             var imgTag = document.getElementById('photo');
             imgTag.setAttribute('src', '../assets/pic_' + num + '.jpg');
             // imgTag.setAttribute('src', '../assets/pic_8.jpg');
