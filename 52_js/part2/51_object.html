@@ -39,7 +39,7 @@
             객체의 종류
             1. 내장 객체(Built-in Object)
                 - 자바스크립트 엔진에 내장되어 있는 객체
-                - Date, Array, Math, String 등
+                - Object, Date, Array, Math, String 등
             2. 브라우저 객체 모델(BOM, Browser Object Model)
                 - 브라우저에 계층 구조로 내장되어 있는 객체
                 - window, document, screen, location, history, navigator
@@ -47,11 +47,57 @@
                 - HTML 문서 구조
         */
 
-        // 내장 객체 생성
-        // 객체 생성 시 new 키워드와 생성함수를 사용한다.
-        // 참조변수(인스턴스명) = new 생성함수()
+        /* 
+        내장 객체 생성
+            객체 생성 시 new 키워드와 생성함수(->이미 자바스크립트에 만들어져 있는 함수)를 사용한다.
 
+        객체 생성1
+            참조변수(인스턴스명) = new 생성함수()
+            let 객체 = new 생성함수();
+            객체.속성 = 값;
+            객체.속성 = function(){};
 
+            ex. let d = new date(); (->let d; 와 다른 함수)
+            이때 변수를 객체(참조)변수라 하며, 인스턴스(instance, 사본)라 부른다.
+
+        객체 생성2 =>더 일반적인 방법
+            let 객체 = {
+                속성: 값,
+                속성: function(){}
+            };
+
+            객체 내에 함수를 값으로 하는 속성을 메서드라 한다.
+
+        객체.메서드() = function(){}; => 메서드는 데이터를 받을 때 함수로 받음.
+        객체.속성 = 값; => 속성은 데이터를 받을 때 단일 데이터로 받음.
+         */
+
+        // tv 객체를 사용자가 만든다면 =>사용자 정의 객체
+        // 객체 생성1 방법
+        // this는 객체 자기자신 (여기선 tv를 가리킴)
+        let tv = new Object();
+
+        tv.color = 'white'; // tv.속성 = 값
+        tv.price = 300000; // tv.속성 = 값
+        tv.info = function(){
+            document.write('tv 색상: ' + tv.color, '<br>'); // this.color로 입력 가능
+            document.write('tv 가격: ' + tv.price, '<br>'); // this.price로 입력 가능
+        }; // tv.메서드()
+
+        tv.info();
+
+        // 객체 생성2 방법
+        // this는 객체 자기자신 (여기선 tv2를 가리킴)
+        let tv2 = {
+            color: 'blue',
+            price: 500000,
+            info: function(){
+                document.write('tv2 색상: ' + tv2.color, '<br>'); // this.color로 입력 가능
+                document.write('tv2 가격: ' + tv2.price, '<br>'); // this.price로 입력 가능
+            }
+        };
+
+        tv2.info();
 
     </script>
 </body>
