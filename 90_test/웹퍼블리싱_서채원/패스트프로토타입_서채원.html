@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹페이지_서채원</title>
+    <style>
+        /* 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        /* 레이아웃과 배경색 */
+        .wrap {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        section {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        /* 로고 */
+        .logo {
+            text-align: center;
+            line-height: 100px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        /* 슬라이드 */
+        ul {
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            height: 500px;
+            animation: slide 9s infinite;
+        }
+
+        li {
+            width: 1000px;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        @keyframes slide {
+            0% {
+                top: 0;
+            }
+
+            5% {
+                top: -100%;
+            }
+
+            33% {
+                top: -100%;
+            }
+
+            38% {
+                top: -200%;
+            }
+
+            66% {
+                top: -200%;
+            }
+
+            71% {
+                top: -300%;
+            }
+
+            99.99% {
+                top: -300%;
+            }
+
+            100% {
+                top: 0%;
+            }
+        }
+
+        /* 카피라이트 */
+        .copy {
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header>
+        <h1 class="logo">LOGO</h1>
+    </header>
+
+    <!-- 섹션 -->
+    <div class="wrap">
+        <!-- 섹션 -->
+        <section class="section">
+            <h1>우주</h1>
+            <ul>
+                <li><img src="images/slide1.jpg" alt="우주1"></li>
+                <li><img src="images/slide2.jpg" alt="우주2"></li>
+                <li><img src="images/slide3.jpg" alt="우주3"></li>
+                <li><img src="images/slide1.jpg" alt="우주1"></li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- 푸터 -->
+    <footer class="copy">Copyright 서채원. All rights reserved.</footer>
+</body>
+
+</html>

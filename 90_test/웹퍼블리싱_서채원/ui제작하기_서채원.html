@@ -19,6 +19,11 @@
         }
 
         /* 레이아웃과 배경색 */
+        .wrap {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
         section {
             position: relative;
             height: 500px;
@@ -32,9 +37,10 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            font-size: 3rem;
+            font-weight: 300;
             color: #fff;
-            text-shadow: 1px 1px 5px #000;
+            font-size: 3rem;
+            text-shadow: 1px 1px 10px #000;
         }
 
         /* 슬라이드 */
@@ -90,15 +96,18 @@
 </head>
 
 <body>
-    <section>
-        <h1>메인 타이틀</h1>
-        <ul>
-            <li><img src="images/slide1.jpg" alt=""></li>
-            <li><img src="images/slide2.jpg" alt=""></li>
-            <li><img src="images/slide3.jpg" alt=""></li>
-            <li><img src="images/slide1.jpg" alt=""></li>
-        </ul>
-    </section>
+    <div class="wrap">
+        <!-- 섹션 -->
+        <section class="section">
+            <h1>우주</h1>
+            <ul>
+                <li><img src="images/slide1.jpg" alt="우주1"></li>
+                <li><img src="images/slide2.jpg" alt="우주2"></li>
+                <li><img src="images/slide3.jpg" alt="우주3"></li>
+                <li><img src="images/slide1.jpg" alt="우주1"></li>
+            </ul>
+        </section>
+    </div>
 </body>
 
 </html>
