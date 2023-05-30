@@ -18,7 +18,10 @@
         */
 
         // 전화번호 뒤 4자리 '*'표시 하기
-
+        // 데이터를 재할당 하려면 let 변수, 그대로 사용하면 const 변수
+        let phoneNum = prompt('당신의 폰 번호를 입력하세요.');
+        phoneNum = phoneNum.substring(0, phoneNum.length - 4) + '****';
+        document.write(phoneNum);
 
     </script>
 </body>

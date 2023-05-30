@@ -41,9 +41,14 @@
             trim(): 문자열 앞 또는 뒤에 공백 문자열 삭제
         */
 
+        // 공백 포함하여 인덱스 번호 부여
         var str = 'Hello Thank you good luck to you';
 
-
+        // 왼쪽에서 오른쪽 방향으로 이동. 먼저 찾은 you의 배열 번호를 출력
+        document.write(str.indexOf('you'), '<br>');
+        document.write(str.substr(12, 3), '<br>');
+        document.write(str.toUpperCase(), '<br>');
+        document.write(str.charCodeAt(8), '<br>');
 
     </script>
 </body>

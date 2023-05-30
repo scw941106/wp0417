@@ -12,7 +12,8 @@
     <h1>배열 객체</h1>
     <script>
        /* 
-            splice(index, count, value1, value2, ...): index번호부터 count개수만큼 삭제 후 value 추가
+            splice(index, count, value1, value2, ...): index번호부터 count개수만큼 삭제 후 value 추가 (value 생략 가능)
+
             pop(): 마지막 인덱스에 저장된 데이터 삭제
             shift(): 첫 번째 인덱스에 저장된 데이터 삭제
             push(new data): 마지막 인덱스에 새 데이터 삽입
@@ -22,7 +23,17 @@
         var greenArr = ['교대', '방배', '강남'];
         var yellowArr = ['미금', '정자', '수서'];
 
+        document.write(greenArr.splice(0, 2, '서초', '역삼', '압구정'), '<br>');
+        document.write(greenArr, '<br>'); // 교대, 방배 지워지고 서초, 역삼, 압구정 추가
 
+        document.write(yellowArr.pop(), '<br>');
+        document.write(yellowArr, '<br>');
+        document.write(yellowArr.shift(), '<br>');
+        document.write(yellowArr, '<br>');
+        document.write(yellowArr.push('미금'), '<br>');
+        document.write(yellowArr, '<br>');
+        document.write(yellowArr.unshift('수서'), '<br>');
+        document.write(yellowArr, '<br>');
 
     </script>
 </body>
