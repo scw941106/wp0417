@@ -39,6 +39,28 @@
             });
         */
 
+        /*
+            회색 박스 위에서 마우스휠(mousewheel)을 위로 올렸을 때 박스의 색을 빨강으로, 아래로 내렸을 때 박스의 색을 파랑으로 지정하시오.
+        */
+
+        /*
+            $('div').on('mousewheel', function(e, delta){
+                if (delta > 0) {
+                    $('div').css({background: 'red'});
+                } else if (delta < 0) {
+                    $('div').css({background: 'blue'});
+                }
+            });
+        */
+
+        $('div').mousewheel(function(e, delta){
+            if (delta > 0) {
+                $('div').css({background: 'red'});
+            } else if (delta < 0) {
+                $('div').css({background: 'blue'});
+            }
+        });
+
     </script>
 </body>
 
