@@ -10,7 +10,7 @@
         div {
             width: 300px;
             height: 300px;
-            background: blue;
+            background-color: blue;
             margin: 100px auto;
         }
     </style>
@@ -19,12 +19,47 @@
 <body>
     <div></div>
 
+    <!-- 제이쿼리 라이브러리 파일 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- 제이쿼리 UI 라이브러리 파일 -->
+    <!-- 배경 색상을 애니메이트 시킨다. -->
+    <!-- 다양한 가속도를 지정할 수 있다. -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script>
-        /* 
-            $('선택자').animate({속성: 값}, 시간, '가속도') ~ 요소에 애니메이션 적용
+        /*
+            $('선택자')에 애니메이션 적용
+        
+            $('선택자').css({속성: 값})
+            $('선택자').animate({속성: 값}) -> 부드럽게 바뀜.
+
+            $('선택자').animate({속성: 값}[, 시간][, '가속도'])
+            $('선택자').animate({속성: 값}, 400, 'swing') -> 시간 기본값 400, 가속도 기본값 swing
+            가속도: swing(가속), linear(등속)
         */
+        /*
+             박스 위에 마우스를 올리면
+             박스의 크기를 가로/세로 500px로
+             박스에서 마우스를 떼면
+             박스의 크기를 기존의 가로/세로 300px로 애니메이트 되도록 지정하시오.
+
+             background
+             'background-color'
+             backgroundColor
+        */
+
+        /* $('div').mouseenter(function () {
+            $(this).css({ width: 500, height: 500, backgroundColor: 'red' }, 800, 'easeOutElastic');
+        }); */
+        $('div').mouseenter(function () {
+            $(this).animate({ width: 500, height: 500, backgroundColor: 'red' }, 800, 'easeOutElastic');
+        });
+
+        /* $('div').mouseleave(function () {
+            $(this).css({ width: 300, height: 300, backgroundColor: 'blue' }, 800, 'easeOutElastic');
+        }); */
+        $('div').mouseleave(function () {
+            $(this).animate({ width: 300, height: 300, backgroundColor: 'blue' }, 800, 'easeOutElastic');
+        });
 
     </script>
 </body>

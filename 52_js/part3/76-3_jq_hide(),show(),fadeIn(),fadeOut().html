@@ -8,46 +8,87 @@
     <title>HTML+CSS+JS</title>
     <style>
         li {
+            display: inline;
             font-size: 30px;
             margin-left: 50px;
+            background: lightpink;
         }
         div {
-            float:left;
             width: 400px;
             height: 400px;
             margin: 50px;
             font-size: 40px;
             color: #fff;
-        }
-        .box1 {
             background: blue;
-        }
-        .box2 {
-            background: red;
         }
     </style>
 </head>
 
 <body>
     <ul>
-        <li>박스1 hide</li>
-        <li>박스1 show</li>
-        <li>박스2 fadeOut</li>
-        <li>박스2 fadeIn</li>
+        <li>hide</li>
+        <li>show</li>
+        <li>fadeOut</li>
+        <li>fadeIn</li>
+        <li>slideUp</li>
+        <li>slideDown</li>
     </ul>
 
-    <div class="box1">박스1</div>
-    <div class="box2">박스2</div>
+    <div class="box">박스</div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script>
         /* 
+            이벤트 메서드 ~ 마우스 동작
+            탐색 메서드 ~ 요소 선택
+
+            효과 메서드
+            $('선택자').stop() ~ 이전 효과를 멈춤
+            
             $('선택자').hide() ~ 숨김
             $('선택자').show() ~ 보임
             $('선택자').fadeOut(시간) ~ 서서히 숨김
             $('선택자').fadeIn(시간) ~ 서서히 보임
+            $('선택자').slideUp(시간) ~ 아래에서 위로 서서히 사라짐
+            $('선택자').slideDown(시간) ~ 위에서 아래로 서서히 나타남
+
+            자바스크립트 시간: ms(밀리초) 단위
+            1s = 1000ms
         */
+
+        // 첫 번째 li = eq(0)
+        $('li').eq(0).click(function(){
+            $('div').hide();
+        });
+        // 두 번째 li = eq(1)
+        $('li').eq(1).click(function(){
+            $('div').show();
+        });
+        // 세 번째 li = eq(2)
+        $('li').eq(2).click(function(){
+            $('div').fadeOut();
+        });
+        // 네 번째 li = eq(3)
+        $('li').eq(3).click(function(){
+            $('div').fadeIn();
+        });
+        // 다섯 번째 li = eq(4)
+        $('li').eq(4).click(function(){
+            $('div').slideUp();
+        });
+        // 여섯 번째 li = eq(5)
+        $('li').eq(5).click(function(){
+            $('div').slideDown();
+        });
+
+        // 마우스 갖다대면 슬라이드 내려오는 효과 + stop 효과
+        $('li').eq(5).mouseenter(function(){
+            $('div').stop().slideDown();
+        });
+        $('li').eq(5).mouseleave(function(){
+            $('div').stop().slideUp();
+        });
 
     </script>
 </body>
