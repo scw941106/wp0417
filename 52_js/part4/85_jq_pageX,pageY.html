@@ -19,11 +19,29 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
-        /* 
+        /*
             e.pageX ~ 브라우저상 마우스 커서의 x축 좌표
             e.pageY ~ 브라우저상 마우스 커서의 y축 좌표
         */
+        /*
+            창 위에 마우스를 이동하면
+            마우스의 x좌표와 y좌표를 span 요소에 출력하시오.
+        */
+       
+        // $('선택자')
+        // $("선택자")
+        // $(window) ~ BOM 객체(내장객체)
+        // $(document) ~ DOM 객체(내장객체)
+        // $(this) ~ this는 객체가 아닌 키워드(정해져 있는 예약어)
+        // 이벤트 객체 속성: pageX, pageY
 
+        // 창 위에서 마우스를 이동하면 함수 실행 (e는 매개변수, event의 앞자를 따서 e, 사용자 임의 설정 가능 a, b, ...)
+        $(window).mousemove(function(e){
+            // .posX에 마우스의 x좌표를 표시한다.
+            $('.posX').text(e.pageX);
+            // .posY에 마우스의 y좌표를 표시한다.
+            $('.posY').text(e.pageY);
+        });
 
     </script>
 </body>
