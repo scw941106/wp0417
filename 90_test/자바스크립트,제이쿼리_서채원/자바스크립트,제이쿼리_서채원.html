@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내비게이션_서채원</title>
+    <style>
+        /* 공통 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 글꼴 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
+
+        .ff1 {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* navigation */
+        nav {
+            z-index: 1;
+            position: relative;
+            top: 35px;
+            width: 1200px;
+            height: 30px;
+            margin: 0 auto;
+        }
+
+        .nav_bg {
+            position: absolute;
+            left: 0;
+            top: 32px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        /* 1depth: main */
+        .main {
+            position: relative;
+            top: 0px;
+            right: 0;
+            width: 640px;
+            height: 30px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+            background: #333;
+        }
+
+        .main>li {
+            position: relative;
+            float: left;
+            width: 160px;
+        }
+
+        .main>li>a {
+            display: block;
+            width: 100%;
+            padding: 5px 0;
+            color: #fff;
+        }
+
+        .main>li:hover>a {
+            background: #ccc;
+            color: #333;
+        }
+
+        /* 2depth: sub */
+        .sub {
+            display: none;
+            padding-top: 15px;
+        }
+
+        .sub a {
+            display: block;
+            width: 100%;
+            color: #ccc;
+            font-size: 14px;
+            font-weight: 300;
+            padding: 3px 0px;
+        }
+
+        .sub a:hover {
+            background: rgba(255, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav_bg"></div>
+        <ul class="main">
+            <li><a href="#">축제소개</a>
+                <ul class="sub">
+                    <li><a href="#">Festival 소개</a></li>
+                    <li><a href="#">행사장 안내</a></li>
+                    <li><a href="#">조직위원회</a></li>
+                </ul>
+            </li>
+            <li><a href="#">예약안내</a>
+                <ul class="sub">
+                    <li><a href="#">예약하기</a></li>
+                    <li><a href="#">예약확인/취소</a></li>
+                    <li><a href="#">단체예약문의</a></li>
+                </ul>
+            </li>
+            <li><a href="#">아티스트</a>
+                <ul class="sub">
+                    <li><a href="#">고릴라즈</a></li>
+                    <li><a href="#">메이저 레이저</a></li>
+                    <li><a href="#">아우스게인</a></li>
+                    <li><a href="#">타임로드</a></li>
+                </ul>
+            </li>
+            <li><a href="#">커뮤니티</a>
+                <ul class="sub">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">사진갤러리</a></li>
+                    <li><a href="#">영상갤러리</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        // 내비게이션바
+        $('.main > li').mouseenter(function () {
+            $('.sub').stop().slideDown();
+            $('.nav_bg').stop().animate({ height: 150 });
+        });
+        $('nav').mouseleave(function () {
+            $('.sub').stop().slideUp();
+            $('.nav_bg').stop().animate({ height: 0 });
+        });
+    </script>
+</body>
+
+</html>

@@ -40,10 +40,10 @@
         }
 
         /* 1depth => 깊이 */
-        .main {
-            /* flex는 부모한테 지정, float는 자식한테 지정 ex. .main>li */
+        /* .main {
+            flex는 부모한테 지정, float는 자식한테 지정 ex. .main>li
             display: flex;
-        }
+        } */
 
         .main>li {
             width: 150px;
@@ -135,19 +135,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         // 내비게이션바
-        // 메인메뉴 li에 마우스를 올리면 함수 실행
         $(".main > li").mouseenter(function () {
-            // this란? 마우스가 올라간 메인메뉴 li
-            // 메인메뉴 li의 자식인 .sub가 위에서 아래로 나타난다.
-            // stop은 이전 동작을 정지 -> 효과 메서드 앞에만 붙인다.
-            // 효과 메서드: hide(), show(), fadeIn(), fadeOut(), slideUp(), slideDown(), animate(), ...
-            $(this).children(".sub").stop().slideDown();
+            // children(자식 선택자만)
+            // find(자식+손자 선택자)
+            $(this).find(".sub").stop().slideDown();
         });
-        // 메인메뉴 li에서 마우스가 벗어나면 함수 실행
         $(".main > li").mouseleave(function () {
-            // this란? 마우스가 벗어난 메인메뉴 li
-            // 메인메뉴 li의 자식인 .sub가 아래에서 위로 사라진다.
-            $(this).children(".sub").stop().slideUp();
+            $(this).find(".sub").stop().slideUp();
         });
     </script>
 </body>
