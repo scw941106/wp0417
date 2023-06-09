@@ -16,6 +16,8 @@
             <!-- onclick이란? HTML의 이벤트 속성 -->
             <button onclick="gallery(0);">이전</button>
             <button onclick="gallery(1);">다음</button>
+            <!-- <button class="btn1">이전</button>
+            <button class="btn2">다음</button> -->
         </p>
         <p><img src="../assets/pic_1.jpg" alt="" id="photo"></p>
     </div>
@@ -41,7 +43,20 @@
                 var 변수 = 함수명();
         */
 
-        var num = 1;
+        /* const btn1 = document.querySelector('.btn1');
+        const btn2 = document.querySelector('.btn2');
+
+        btn1.ondlick = imgFn;
+        btn2.ondlick = imgFn;
+
+        function imgFn1() {
+            gallery(0);
+        }
+        function imgFn2() {
+            gallery(1);
+        } */
+
+        let num = 1;
         function gallery(direct) {
             if (direct) { // direct 값이 1이면 참으로 if문 실행.
                 if (num == 8) return; // 8 값을 만나면 함수를 끝냄.
