@@ -13,6 +13,7 @@
     <div id="galleryZone">
         <p>
             <!-- 인라인 스크립트 -->
+            <!-- onclick이란? HTML의 이벤트 속성 -->
             <button onclick="gallery(0);">이전</button>
             <button onclick="gallery(1);">다음</button>
         </p>
@@ -44,9 +45,13 @@
         function gallery(direct) {
             if (direct) { // direct 값이 1이면 참으로 if문 실행.
                 if (num == 8) return; // 8 값을 만나면 함수를 끝냄.
+                // num을 1씩 증가
+                // num = num + 1;
+                // num += 1; => 전부 같은 문장
                 num++;
             } else { // direct 값이 0이면 거짓으로 else문 실행.
                 if (num == 1) return; // 1 값을 만나면 함수를 끝냄.
+                // num을 1씩 감소
                 num--;
             }
 
